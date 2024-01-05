@@ -104,16 +104,16 @@ BotInfo = """
 - ```TOKENIZER_NAME = TheBloke/Wizard-Vicuna-13B-Uncensored-HF ``` - HaggingFace name or local path of the tokenizer
 - ```HF_TOKEN = your token``` - your HaggingFace token (used mostly with non opensource models, you need it to download llama2 from meta)
 - ```TEMPERATURE = 0.9``` - High values allow model to be more creative but sometimes unpredictable behaviour
-- ```QUANT_BITS = 8``` - count of bits to use with butsandbytes quantization. supported 4 and 8. To load model without any quantization use 0 values
+- ```QUANT_BITS = 8``` - count of bits to use with bitsandbytes quantization. supported 4 and 8. To load model without any quantization use 0 value
 - ```USE_WANDB = True```
 - ```WANDB_TOKEN = your token``` (not implemented yet)
 - ```OFFLOAD_FOLDER_NAME = offload_folder``` - used with large models and low RAM 
-- ```MAX_NEW_TOKENS = 256``` - maximum number of generated tokens (1 token ~ 0.75 word). High values can affect in a lot of time to generate
+- ```MAX_NEW_TOKENS = 256``` - maximum number of generated tokens (1 token ~ 0.75 word). High values can result in a lot of time to generate
 Low values - interrupted answers.
-- ```TOP_P = 0.9``` - how many potential tokens will be used for generating. High values - more creative model. dometime unredictable behavior
+- ```TOP_P = 0.9``` - how many potential tokens will be used for generating. High values - more creative model. sometimes unredictable behavior
 - ```TOP_K = 0``` - similar to TOP_P
 - ```SIMILARITY_THRESHOLD = 0.7``` - model response compared to all bot answers before and calculate simmilarity. this threshold define metric to indicate similar texts.
-- ```MAX_COUNT_ATTEMPTS_TO_GENERATE_UNIQ_ANSWER = 3``` - model response compared to all bot answers before and calculate simmilarity. if there was similar message from Bot, than try to generate once again. This parameter indicate maximum number of generating attempts
+- ```MAX_COUNT_ATTEMPTS_TO_GENERATE_UNIQ_ANSWER = 3``` - model response is compared to all bot answers before and similarity is calculated. if there was similar message from Bot, then try to generate once again. This parameter indicates maximum number of generating attempts
 - ```TELEGRAM_TOKEN = your token``` - BotFather telegram bot token
 - ```POSTGRESQL_HOST = 192.168.0.206```
 - ```POSTGRESQL_DB_NAME = llm_dialogues```
@@ -173,7 +173,7 @@ services:
               capabilities: [gpu]```
 
 ## PostgresQL explanation
-this chatBot can interract with many users and save there history in PostgresQL database
+this chatBot can interract with many users and save their history in PostgresQL database
 
 ```python
 	self.cur.execute(
@@ -210,7 +210,7 @@ I have tested this model and in some cases it overcame LLama restrictions and fi
   ```
 
 
-## USEFULL LINKS
+## USEFUL LINKS
 - https://huggingface.co/TheBloke/Wizard-Vicuna-13B-Uncensored-HF
 - https://github.com/huggingface/transformers
 - https://stackoverflow.com/questions/13322485/how-to-get-the-primary-ip-address-of-the-local-machine-on-linux-and-os-x
