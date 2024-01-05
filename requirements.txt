@@ -1,0 +1,15 @@
+git+https://github.com/huggingface/transformers.git
+bitsandbytes
+git+https://github.com/huggingface/accelerate.git
+wandb
+peft
+huggingface-hub
+sentencepiece
+gradio
+optimum
+auto-gptq --extra-index-url https://huggingface.github.io/autogptq-index/whl/cu118
+scipy
+nltk
+meteor
+pyTelegramBotAPI
+psycopg2-binary
